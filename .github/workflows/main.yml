@@ -42,3 +42,8 @@ jobs:
     - name: Tests
       run: |
         python -m unittest discover -s tests
+    - name: Deploy to Render
+      run: |
+        curl -X POST "https://api.render.com/deploy/srv-csqe4588fa8c73c4cumg?key=niziqVSL-ig" \
+        -H "Content-Type: application/json" \
+        -d '{}'
